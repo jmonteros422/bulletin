@@ -1,0 +1,37 @@
+#tweets { }
+div.user {
+  font-size: 1rem;
+}
+  div.user span {
+    padding: 0 0 0 1.6rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+    div.user span:before {
+      content: '';
+      background: url('twitter.svg');
+      height: 40px;
+      width: 40px;
+      display: block;
+      position: absolute;
+      top: 1.4rem;
+      left: 1rem;
+      z-index: 99;
+
+    }
+  div.user img {
+//    @include border-radius(50%);
+    display: none;
+  }
+  div.user span span { display: none; }
+p.tweet {
+  margin-top: .3rem;
+  font-size: 1.2rem;
+}
+  p.tweet a {
+    font-size: 1rem;
+    color: #ededed;
+    font-style: italic;
+    border-bottom: dotted 1px #ededed;
+  }
+p.interact { display: none; }
