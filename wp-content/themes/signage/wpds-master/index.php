@@ -32,10 +32,18 @@ get_header(); ?>
 //              $link = get_post_meta($post->ID, 'link', true);
 //              $videoLink = get_post_meta($post->ID, 'video-link', true);
 //				<h2><?php echo get_post_meta($post->ID, 'subtitle', true) ?><!--</h2>-->
-				?>
+<!--				?>-->
                 <li class="post-box large-12 columns">
           		<div class="row">
-          		<p><?php echo do_shortcode( get_the_content() ) ?></p>
+				<?php if (get_post_meta($post->ID, 'video-link', true)): ?>
+					<div class="video">
+						<video controls width="720" height="480" data-autoplay="true" >
+							<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/mp4" />
+						</video>
+					</div>
+				<?php else: ?>
+          		<?php echo do_shortcode( get_the_content() ) ?>
+				<?php endif; ?>
 				</div>
 				</li>
 
