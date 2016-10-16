@@ -16,13 +16,22 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
 	<title><?php bloginfo('name'); ?></title>
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'>  
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheets/normalize.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheets/app.css">
 	<script src="<?php bloginfo('template_url'); ?>/javascripts/vendor/custom.modernizr.js"></script>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheets/ninja-slider.css">
+	<script src="<?php bloginfo('template_url'); ?>/javascripts/vendor/ninjaVideoPlugin.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/javascripts/vendor/ninja-slider.js"></script>
+	<script type="text/javascript">
+		//don't copy the script below into your page.
+		if (!document.domain) alert("The video will not work properly if opening the page by local path. Please test this page through HTTP on a web or localhost server");
+	</script>
 	<title><?php wp_title(); ?></title>
         <?php wp_head(); ?>
 	<style>
+
+
 		.header-container{
 			height: 10%;
 			background-color:green;

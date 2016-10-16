@@ -12,8 +12,9 @@
 get_header(); ?>
 <div class="row">
     <!-- Main Content -->
-    <div class="large-12 columns" role="content">
-			<ul data-orbit>
+    <div id='ninja-slider' class="large-12 columns" role="content">
+		<div class="slider-inner">
+			<ul>
 	            <?php
 	            $args=array(
 	                'post_type' => 'post',
@@ -30,10 +31,9 @@ get_header(); ?>
 //              $copy_color = get_post_meta($post->ID, 'copy-color', true);
 //              $link = get_post_meta($post->ID, 'link', true);
 //              $videoLink = get_post_meta($post->ID, 'video-link', true);
+//				<h2><?php echo get_post_meta($post->ID, 'subtitle', true) ?><!--</h2>-->
 				?>
                 <li class="post-box large-12 columns">
-<!--          		<h1>--><?php //echo get_post_meta($post->ID, 'video-link', true) ?><!--</h1>-->
-          		<h2><?php echo get_post_meta($post->ID, 'subtitle', true) ?></h2>
           		<div class="row">
           		<p><?php echo do_shortcode( get_the_content() ) ?></p>
 				</div>
@@ -48,5 +48,4 @@ get_header(); ?>
 	</div>
 </div>
 
-<!-- Ari di ang footer: wp-content/themes/signage/wpds-master/footer.php-->
 <?php get_footer(); ?>
