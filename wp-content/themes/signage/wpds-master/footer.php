@@ -43,6 +43,41 @@ $(function() {
 
 //    twitterFetcher.fetch('393025966789754880', 'tweets', 1, true, true, false);
   </script>
+<script>
+
+	$(function() {
+		$(document).foundation();
+	});
+
+	var ByeBye = "Ninja Slider trial version";
+
+	function removeText(s) {
+		var el, els = document.getElementsByTagName('*');
+		var node, nodes;
+
+		for (var i=0, iLen=els.length; i<iLen; i++) {
+			el = els[i];
+
+			if (el.tagName.toLowerCase() != 'script') {
+				nodes = el.childNodes;
+			} else {
+				nodes = [];
+			}
+
+			for (var j=0, jLen=nodes.length; j<jLen; j++) {
+				node = nodes[j];
+
+				if (node.nodeType == 3) {
+					node.data = node.data.replace(s, '');
+				}
+			}
+		}
+	}
+
+	window.onload = function() {
+		removeText(ByeBye);
+	}
+</script>
 
  </body>
 </html>
