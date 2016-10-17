@@ -14,7 +14,7 @@ Author URI: http://pixelydo.com/
  * Adds a meta box to the post editing screen
  */
 function wpds_custom_meta() {
-	add_meta_box( 'wpds', __( 'Video Url (Content will be ignored if this is not empty!)', 'wpds-textdomain' ), 'wpds_meta_callback', 'post' );
+	add_meta_box( 'wpds', __( 'Signage Slide Type', 'wpds-textdomain' ), 'wpds_meta_callback', 'post' );
 }
 add_action( 'add_meta_boxes', 'wpds_custom_meta' );
 
@@ -25,12 +25,55 @@ function wpds_meta_callback( $post ) {
 	wp_nonce_field( basename( __FILE__ ), 'wpds_nonce' );
 	$wpds_stored_meta = get_post_meta( $post->ID );
 	?>
-<p>
-	<label for="link" class="wpds-row-title"><?php _e( 'Video Link', 'wpds-textdomain' )?></label>
-	<input type="text" name="video-link" id="video-link" value="<?php if ( isset ( $wpds_stored_meta['video-link'] ) ) echo $wpds_stored_meta['video-link'][0]; ?>" />
-</p>
 
+	<p>
+		<label for="link" class="wpds-row-title"><?php _e( 'Slide Content Type', 'wpds-video-type' )?></label>
+		<select name="wpds-video-type" id="wpds-video-type">
+			<option value="none">Post</option>
+			<option value="uploaded">Upload Link (Path to Video file)</option>
+			<option value="embed">Embedded (eg. https://www.youtube.com/embed/E5ln4uR4TwQ)</option>
+		</select>
+	</p>
 
+	<p>
+		<label for="link"  class="wpds-row-title-link"><?php _e( 'Video Link', 'wpds-textdomain' )?></label>
+		<input type="url" class="wpds-row-title-link-input" name="video-link" id="video-link" value="<?php if ( isset ( $wpds_stored_meta['video-link'] ) ) echo $wpds_stored_meta['video-link'][0]; ?>" />
+	</p>
+
+	<script>
+		jQuery(document).ready(function() {
+			var selectId = jQuery('#wpds-video-type');
+			var videoType = '<?php if ( isset ( $wpds_stored_meta['wpds-video-type'] ) ) echo $wpds_stored_meta['wpds-video-type'][0]; ?>';
+
+			jQuery("#wpds").insertBefore( jQuery("#wp-content-wrap"));
+			selectId.val(videoType);
+			checkVal(videoType);
+
+			selectId.change(function() {
+				var currentVal = jQuery(this).val();
+				checkVal(currentVal);
+			});
+
+		});
+
+		function checkVal(val){
+
+			if (val != 'none'){
+				jQuery('.wpds-row-title-link-input, .wpds-row-title-link').show();
+				jQuery('.wp-editor-area').hide();
+				if ( val == 'uploaded'){
+					jQuery('.wpds-row-title-link').text('Upload Link directory');
+				}else{
+					jQuery('.wpds-row-title-link').text('Video Embedded link');
+				}
+
+			}else{
+				jQuery('.wpds-row-title-link-input, .wpds-row-title-link').hide();
+				jQuery('.wp-editor-area').show();
+			}
+
+		}
+	</script>
 
 	<?php
 }
@@ -64,6 +107,9 @@ function wpds_meta_save( $post_id ) {
 	if( isset( $_POST[ 'video-link' ] ) ) {
 		update_post_meta( $post_id, 'video-link', $_POST[ 'video-link' ] );
 	}
+	// Checks for input and saves if needed
+	if( isset( $_POST[ 'wpds-video-type' ] ) ) {
+		update_post_meta( $post_id, 'wpds-video-type', $_POST[ 'wpds-video-type' ] );	}
 
 	// Checks for input and saves if needed
 	if( isset( $_POST[ 'background-color' ] ) ) {

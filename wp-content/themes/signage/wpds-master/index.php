@@ -35,12 +35,20 @@ get_header(); ?>
 <!--				?>-->
                 <li class="post-box large-12 columns">
           		<div class="row">
-				<?php if (get_post_meta($post->ID, 'video-link', true)): ?>
+				<?php if (get_post_meta($post->ID, 'wpds-video-type', true) != 'none'): ?>
+					<?php if (get_post_meta($post->ID, 'wpds-video-type', true) == 'uploaded'): ?>
 					<div class="video">
-						<video controls width="720" height="480" data-autoplay="true" >
-							<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/mp4" />
+						<video controls width="100%" height="100%" data-autoplay="1" >
+							<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/mp4"/>
+							<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/ogg"/>
 						</video>
 					</div>
+					<?php else: ?>
+						<div class="video">
+							<iframe src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" frameborder="0" allowfullscreen data-autoplay="true"></iframe>
+						</div>
+					<?php endif; ?>
+
 				<?php else: ?>
           		<?php echo do_shortcode( get_the_content() ) ?>
 				<?php endif; ?>
