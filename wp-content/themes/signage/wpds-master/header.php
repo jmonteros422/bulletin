@@ -23,52 +23,27 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheets/ninja-slider.css">
 	<script src="<?php bloginfo('template_url'); ?>/javascripts/vendor/ninjaVideoPlugin.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/javascripts/vendor/ninja-slider.js"></script>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheets/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
 	<script type="text/javascript">
 		//don't copy the script below into your page.
 		if (!document.domain) alert("The video will not work properly if opening the page by local path. Please test this page through HTTP on a web or localhost server");
 	</script>
 	<title><?php wp_title(); ?></title>
         <?php wp_head(); ?>
-	<style>
-
-
-		.header-container{
-			height: 10%;
-			background-color:green;
-		}
-
-		.left{
-			width:80%;
-			height:100%;
-			background-color:red;
-			overflow:hidden;
-		}
-		.left h3, p {
-			font-size: 100%;
-		}
-
-		.right{
-			width: 20%;
-			height:100%;
-			overflow:hidden;
-
-		}
-		.right p {
-			font-size: 100%;
-			margin: 30px 30px;
-		}
-
-	</style>
 </head>
 <body <?php body_class(); ?>>
 <div class="header-container">
 	<div class="left">
-		<h3>St. Therese Private School</h3>
-		<p>#720 Sgt. Bumatay St. Plainview Subd. <br>Mandaluyong City</p>
+		<div class="logo">
+			<img src="wp-content/themes/signage/wpds-master/images/logo.png" alt="" />
+		</div>
+		<div class="brand-title">
+			<h3>St. Therese Private Schools</h3>
+			<p>#720 Sgt. Bumatay St. Plainview Subd. <br>Mandaluyong City</p>
+		</div>
 	</div>
 	<div class="right"><?php echo date('l jS \of F Y h:i:s A') ?></div>
 </div>
 
 	<div class="content"
-
-		
