@@ -10,6 +10,36 @@
 /**
  * Initiate Foundation, for WordPress
  */
+//Custom Code
+add_filter('widget_text','do_shortcode');
+
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+			'name' => 'Custom Header Logo',
+			'before_widget' => '',
+			'after_widget' => '',
+			'before_title' => '',
+			'after_title' => '',
+		)
+	);
+
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+			'name' => 'Text Beside Logo',
+			'before_widget' => '<div class="brand-title"><p>',
+			'after_widget' => '</p></div>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>',
+		)
+	);
+
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+			'name' => 'Header Right',
+
+		)
+	);
+
 
 function foundation_setup() {
 

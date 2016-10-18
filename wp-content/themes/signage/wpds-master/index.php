@@ -37,16 +37,18 @@ get_header(); ?>
           		<div class="row">
 				<?php if (get_post_meta($post->ID, 'wpds-video-type', true) != 'none'): ?>
 					<?php if (get_post_meta($post->ID, 'wpds-video-type', true) == 'uploaded'): ?>
-					<div class="video">
-						<video controls width="100%" height="100%" data-autoplay="1" >
-							<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/mp4"/>
-							<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/ogg"/>
-						</video>
-					</div>
+						<div class="video">
+							<video data-autoplay="true" controls width="100%">
+								<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/mp4" />
+							</video>
+						</div>
 					<?php else: ?>
 						<div class="video">
-							<iframe src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" frameborder="0" allowfullscreen data-autoplay="true"></iframe>
+							<video data-autoplay="true" controls width="100%">
+								<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/mp4" />
+							</video>
 						</div>
+
 					<?php endif; ?>
 
 				<?php else: ?>

@@ -36,14 +36,21 @@
 <div class="header-container">
 	<div class="left">
 		<div class="logo">
-			<img src="wp-content/themes/signage/wpds-master/images/logo.png" alt="" />
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Custom Header Logo") ) : ?>
+				<img src="wp-content/themes/signage/wpds-master/images/logo.png" alt="" />
+			<?php endif;?>
 		</div>
-		<div class="brand-title">
-			<h3>St. Therese Private Schools</h3>
-			<p>#720 Sgt. Bumatay St. Plainview Subd. <br>Mandaluyong City</p>
-		</div>
+
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Text Beside Logo") ) : ?>
+		<?php endif;?>
+
+
 	</div>
-	<div class="right"><?php echo date('l jS \of F Y h:i:s A') ?></div>
-</div>
+	<div class="right">
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header Right") ) : ?>
+		<?php echo date('l jS \of F Y h:i:s A') ?></div>
+		<?php endif;?>
+	</div>
+
 
 	<div class="content"
