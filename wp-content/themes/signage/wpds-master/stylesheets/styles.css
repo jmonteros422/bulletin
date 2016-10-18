@@ -4,7 +4,7 @@
 
 *, html, body {
   overflow: visible;
-  cursor: pointer;
+  cursor: auto;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
 }
@@ -32,23 +32,37 @@
   width: 150px;
 }
 
-
-.row.dock {
-  display: flex;
-  flex-wrap: nowrap;
+/*SLIDER*/
+#ninja-slider {
+  background: #e3e3e3;
 }
 
-.dock .columns:first-child {
-  flex: 1 1 auto;
-  background-color: red;
+#ninja-slider .slider-inner {
+  max-width: 100%;
+
 }
 
-.dock .columns:nth-child(2) {
-  flex: 1 1 auto;
-  background-color: blue;
+/*FOOTER*/
+.row.dock .columns {
+  background: #e3e3e3;
+  color: #333;
+  border: 2px solid #444;
+  -webkit-box-shadow: 1px 1px 5px 0px #717171;
+  -moz-box-shadow:    1px 1px 5px 0px #717171;
+  box-shadow:         1px 1px 5px 0px #717171;
+  margin: 1em;
+  padding: 2em;
+  width: 47%;
+  float: left;
 }
 
-.dock .columns:last-child {
-  flex: 1 1 auto;
-  background-color: green;
+.textwidget {
+  line-height: 1.5;
+}
+
+.dock h6 {
+  font-size: 2rem;
+  color: #333;
+  text-transform: uppercase;
+  padding: .5em 0;
 }
