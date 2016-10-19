@@ -32,7 +32,7 @@ get_header(); ?>
 					<?php if ($postType == 'uploaded'): ?>
 						<div class="video">
 							<video class="videoContent" data-autoplay="true" controls width="100%">
-								<source src="<?php echo $postType ?>" type="video/mp4" />
+								<source src="<?php echo $videoLink ?>" type="video/mp4" />
 							</video>
 						</div>
 					<?php else: ?>
