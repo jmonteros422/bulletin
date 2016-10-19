@@ -37,13 +37,16 @@ function wpds_meta_callback( $post ) {
 
 	<p>
 		<label for="link"  class="wpds-row-title-link"><?php _e( 'Video Link', 'wpds-textdomain' )?></label>
-		<input type="url" class="wpds-row-title-link-input" name="video-link" id="video-link" value="<?php if ( isset ( $wpds_stored_meta['video-link'] ) ) echo $wpds_stored_meta['video-link'][0]; ?>" />
+		<input type="url" style="width:50%"class="wpds-row-title-link-input" name="video-link" id="video-link" value="<?php if ( isset ( $wpds_stored_meta['video-link'] ) ) echo $wpds_stored_meta['video-link'][0]; ?>" />
 	</p>
 
 	<script>
 		jQuery(document).ready(function() {
 			var selectId = jQuery('#wpds-video-type');
+			var currentSelectType =  '<?php echo get_post_meta($post->ID, 'wpds-video-type', true); ?>';
 			var videoType = '<?php if ( isset ( $wpds_stored_meta['wpds-video-type'] ) ) echo $wpds_stored_meta['wpds-video-type'][0]; ?>';
+			var videoInput = jQuery('#video-link').val();
+
 
 			jQuery("#wpds").insertBefore( jQuery("#wp-content-wrap"));
 			selectId.val(videoType);
@@ -51,6 +54,14 @@ function wpds_meta_callback( $post ) {
 
 			selectId.change(function() {
 				var currentVal = jQuery(this).val();
+
+				if (currentSelectType == currentVal){
+					jQuery('#video-link').val(videoInput);
+				}else{
+
+					jQuery('#video-link').removeAttr('value');
+				}
+
 				checkVal(currentVal);
 			});
 
