@@ -4,9 +4,10 @@ var nsOptions =
     sliderId: "ninja-slider",
     transitionType: "fade", //"fade", "slide", "zoom", "kenburns 1.2" or "none"
     autoAdvance: true,
+    slideInterval: 6000,
     delay: "default",
     transitionSpeed: 2000,
-    aspectRatio: "2:1",
+    aspectRatio: "16:9",
     initSliderByCallingInitFunc: false,
     shuffle: false,
     startSlideIndex: 0, //0-based
@@ -14,8 +15,26 @@ var nsOptions =
     pauseOnHover: false,
     keyboardNav: true,
     before: null,
-    license: "mylicense"
+    license: "b2e98"
 };
+
+//var sliderOptions =
+//{
+//    sliderId: "slider",
+//    effect: "17,13,1",
+//    effectRandom: true,
+//    pauseTime: 2800,
+//    transitionTime: 1200,
+//    slices: 14,
+//    boxes: 8,
+//    hoverPause: 1,
+//    autoAdvance: true,
+//    captionOpacity: 0.4,
+//    captionEffect: "fade",
+//    thumbnailsWrapperId: "thumbs",
+//    m: false,
+//    license: "mylicense"
+//};
 
 var nslider = new NinjaSlider(nsOptions);
 

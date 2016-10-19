@@ -13,7 +13,7 @@ get_header(); ?>
 <div class="row">
     <!-- Main Content -->
     <div id='ninja-slider' class="large-12 columns" role="content">
-		<div class="slider-inner">
+		<div class="slider-inner" >
 			<ul>
 	            <?php
 	            $args=array(
@@ -25,10 +25,12 @@ get_header(); ?>
 	            if($the_query->have_posts()) : while ($the_query->have_posts() ) : $the_query->the_post(); ?>
 				<?php $videoLink =  get_post_meta($post->ID, 'video-link', true) ?>
 				<?php $postType =  get_post_meta($post->ID, 'wpds-video-type', true) ?>
-                <li class="post-box large-12 columns">
-          		<div class="row">
+
+
 					<!--Check what kind of slide user wants to post -->
 				<?php if ($postType != 'none'): ?>
+				<li class="post-box large-12 columns" data-delay="20000">
+				<div class="video">
 					<?php if ($postType == 'uploaded'): ?>
 						<div class="video">
 							<video class="videoContent" data-autoplay="true" controls width="100%">
@@ -47,11 +49,18 @@ get_header(); ?>
 							</div>
 						<?php } ?>
 					<?php endif; ?>
+				</div>
+				</li>
 				<?php else: ?>
+				<li class="post-box large-12 columns" data-delay="20000">
+					<div class="row">
 					<!--Post text/images to slide-->
           		<?php echo do_shortcode( get_the_content() ) ?>
+					</div>
+				</li>
 				<?php endif; ?>
-				</div>
+
+
 				</li>
 	            <?php endwhile; ?>
 				<?php endif; ?>
