@@ -38,13 +38,13 @@ get_header(); ?>
 				<?php if (get_post_meta($post->ID, 'wpds-video-type', true) != 'none'): ?>
 					<?php if (get_post_meta($post->ID, 'wpds-video-type', true) == 'uploaded'): ?>
 						<div class="video">
-							<video data-autoplay="true" controls width="100%">
+							<video class="videoContent" data-autoplay="true" controls width="100%">
 								<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/mp4" />
 							</video>
 						</div>
 					<?php else: ?>
 						<div class="video">
-							<video data-autoplay="true" controls width="100%">
+							<video class="videoContent" data-autoplay="true" controls width="100%">
 								<source src="<?php echo get_post_meta($post->ID, 'video-link', true) ?>" type="video/mp4" />
 							</video>
 						</div>
