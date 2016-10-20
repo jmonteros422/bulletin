@@ -1,3 +1,157 @@
+@font-face {
+    font-family: 'robotoblack';
+    src: url('../font/roboto-black-webfont.woff2') format('woff2'),
+         url('../font/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight_italic';
+    src: url('../font/roboto-lightitalic-webfont.woff2') format('woff2'),
+         url('../font/roboto-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../font/roboto-medium-webfont.woff2') format('woff2'),
+         url('../font/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium_italic';
+    src: url('../font/roboto-mediumitalic-webfont.woff2') format('woff2'),
+         url('../font/roboto-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../font/roboto-regular-webfont.woff2') format('woff2'),
+         url('../font/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('../font/roboto-thin-webfont.woff2') format('woff2'),
+         url('../font/roboto-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotothin_italic';
+    src: url('../font/roboto-thinitalic-webfont.woff2') format('woff2'),
+         url('../font/roboto-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url('../font/roboto-black-webfont.woff2') format('woff2'),
+         url('../font/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoblack_italic';
+    src: url('../font/roboto-blackitalic-webfont.woff2') format('woff2'),
+         url('../font/roboto-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../font/roboto-bold-webfont.woff2') format('woff2'),
+         url('../font/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold_italic';
+    src: url('../font/roboto-bolditalic-webfont.woff2') format('woff2'),
+         url('../font/roboto-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_condensedbold';
+    src: url('../font/robotocondensed-bold-webfont.woff2') format('woff2'),
+         url('../font/robotocondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_condensedbold_italic';
+    src: url('../font/robotocondensed-bolditalic-webfont.woff2') format('woff2'),
+         url('../font/robotocondensed-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_condenseditalic';
+    src: url('../font/robotocondensed-italic-webfont.woff2') format('woff2'),
+         url('../font/robotocondensed-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('../font/robotocondensed-light-webfont.woff2') format('woff2'),
+         url('../font/robotocondensed-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_condensedlight_italic';
+    src: url('../font/robotocondensed-lightitalic-webfont.woff2') format('woff2'),
+         url('../font/robotocondensed-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('robotocondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoitalic';
+    src: url('../font/roboto-italic-webfont.woff2') format('woff2'),
+         url('../font/roboto-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../font/roboto-light-webfont.woff2') format('woff2'),
+         url('../font/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
   font-size: 14px;
 }
@@ -6,7 +160,7 @@
   overflow: visible;
   cursor: auto;
   box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'ClimaconsRegular', 'Arial', serif;
 }
 
 .header-container {
@@ -50,51 +204,37 @@
 /*FOOTER*/
 .dock {
   padding: 2em;
-  background: #779ECB;
+  background: #f2cfa5;
 }
 
 .row.dock .columns {
   background: #e3e3e3;
   color: #131516;
-  /*border: 2px solid #444;*/
   -webkit-box-shadow: 1px 1px 5px 0px #717171;
   -moz-box-shadow:    1px 1px 5px 0px #717171;
   box-shadow:         1px 1px 5px 0px #717171;
   margin: 1em;
-  padding: 2em;
+  padding: 0;
   width: 47%;
   float: left;
 }
 
-.row.dock .columns:nth-child(odd) {
-  transform: rotate(-1deg);
-  background-color: #F49AC2;
-}
-
-.row.dock .columns:nth-child(even) {
-  transform: rotate(1deg);
-  background-color: #FDFD96;
-}
-
-.row.dock .columns:nth-child(3n+3) {
-  background-color: #77DD77;
-}
-
-.row.dock .columns:nth-child(4n+4) {
-  background-color: #CB99C9;
-}
 
 .textwidget {
   font-size: 1.3rem;
-  padding: .5em 0;
+  padding: 1em;
   line-height: 1.5;
+  background: #fff;
+  color: #333;
 }
 
 .dock h6 {
   font-size: 2rem;
-  color: #333;
+  background: #fe0000;
+  color: #fff;
   text-transform: uppercase;
-  padding: .5em 0;
+  text-align: center;
+  padding: 1em;
 }
 
 .videoContent{
