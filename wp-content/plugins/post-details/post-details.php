@@ -41,7 +41,7 @@ function wpds_meta_callback( $post ) {
 	</p>
 
 	<p>
-		<label for="text"  class="wpds-row-title-idle"><?php _e( 'Slide Idle Time (in seconds)', 'wpds-textdomain' )?></label>
+		<label for="text"  class="wpds-row-title-idle"><?php _e( 'Slide Idle Time or Video Length(in seconds)', 'wpds-textdomain' )?></label>
 		<input type="text" style="width:10%"class="wpds-row-title-link-idle" name="wpds-slide-idle" id="wpds-slide-idle" value="<?php if ( isset ( $wpds_stored_meta['wpds-slide-idle'] ) ) echo $wpds_stored_meta['wpds-slide-idle'][0]; ?>" />
 	</p>
 

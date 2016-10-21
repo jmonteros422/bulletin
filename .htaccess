@@ -1,6 +1,17 @@
 
+php_value upload_max_filesize 256M
+php_value post_max_size 256M
+php_value max_execution_time 0
+php_value max_input_time 0
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
+
+php_value upload_max_filesize 0
+php_value post_max_size 0
+php_value max_execution_time 0
+php_value max_input_time 0
+
 RewriteEngine On
 RewriteBase /bulletin/
 RewriteRule ^index\.php$ - [L]

@@ -163,12 +163,16 @@
   font-family: 'ClimaconsRegular', 'Arial', serif;
 }
 
+body {
+  background: #f2cfa5;
+}
+
 .header-container {
   position: relative;
   float: left;
   width: 100%;
   height: 110px;
-  margin: 1em 0;
+  background: #fff;
 }
 
 .brand-title {
@@ -181,7 +185,8 @@
 
 .header-container .right {
   width: 30%;
-  font-size: 1.5em;;
+  font-size: 1.5em;
+  height:100%;
 }
 
 .left .logo {
@@ -267,4 +272,20 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#date-time-2{
+    list-style: none;
+    height: 100%;
+}
+.date-time {
+    padding: 10px;
+    line-height: 2.5em;
+    height: 100%;
+}
+
+.date-time .date {
+    padding: 10px;
+    line-height: 2.5em;
+    height: 100%;
 }

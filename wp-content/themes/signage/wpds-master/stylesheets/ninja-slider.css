@@ -259,7 +259,8 @@
     padding-top:30px; /* set the distance away from the slider */
     margin:0 auto; /* center align */
     text-align:center;
-    display:table;
+    display:none;
+    /*display:table;*/
     font-size:0;
 }
          
