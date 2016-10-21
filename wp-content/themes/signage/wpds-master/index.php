@@ -53,7 +53,7 @@ get_header(); ?>
 				</div>
 				</li>
 				<?php else: ?>
-				<li class="post-box large-12 columns" data-delay="20000">
+				<li class="post-box large-12 columns" <?php echo ($slideIdle) ? $slideIdle * 1000 : '20000';?>>
 					<div class="row">
 					<div class="content-wysiwyg">
 					<!--Post text/images to slide-->
