@@ -25,11 +25,12 @@ get_header(); ?>
 	            if($the_query->have_posts()) : while ($the_query->have_posts() ) : $the_query->the_post(); ?>
 				<?php $videoLink =  get_post_meta($post->ID, 'video-link', true) ?>
 				<?php $postType =  get_post_meta($post->ID, 'wpds-video-type', true) ?>
+				<?php $slideIdle =  get_post_meta($post->ID, 'wpds-slide-idle', true) ?>
 
 
 					<!--Check what kind of slide user wants to post -->
 				<?php if ($postType != 'none'): ?>
-				<li class="post-box large-12 columns" data-delay="20000">
+				<li class="post-box large-12 columns" data-delay="<?php echo ($slideIdle) ? $slideIdle * 1000 : '20000';?>">
 				<div class="video">
 					<?php if ($postType == 'uploaded'): ?>
 						<div class="video">
@@ -54,8 +55,10 @@ get_header(); ?>
 				<?php else: ?>
 				<li class="post-box large-12 columns" data-delay="20000">
 					<div class="row">
+					<div class="content-wysiwyg">
 					<!--Post text/images to slide-->
-          		<?php echo do_shortcode( get_the_content() ) ?>
+          			<?php echo do_shortcode( get_the_content() ) ?>
+          			</div>
 					</div>
 				</li>
 				<?php endif; ?>

@@ -40,6 +40,11 @@ function wpds_meta_callback( $post ) {
 		<input type="url" style="width:50%"class="wpds-row-title-link-input" name="video-link" id="video-link" value="<?php if ( isset ( $wpds_stored_meta['video-link'] ) ) echo $wpds_stored_meta['video-link'][0]; ?>" />
 	</p>
 
+	<p>
+		<label for="text"  class="wpds-row-title-idle"><?php _e( 'Slide Idle Time (in seconds)', 'wpds-textdomain' )?></label>
+		<input type="text" style="width:10%"class="wpds-row-title-link-idle" name="wpds-slide-idle" id="wpds-slide-idle" value="<?php if ( isset ( $wpds_stored_meta['wpds-slide-idle'] ) ) echo $wpds_stored_meta['wpds-slide-idle'][0]; ?>" />
+	</p>
+
 	<script>
 		jQuery(document).ready(function() {
 			var selectId = jQuery('#wpds-video-type');
@@ -121,6 +126,10 @@ function wpds_meta_save( $post_id ) {
 	// Checks for input and saves if needed
 	if( isset( $_POST[ 'wpds-video-type' ] ) ) {
 		update_post_meta( $post_id, 'wpds-video-type', $_POST[ 'wpds-video-type' ] );	}
+
+	// Checks for input and saves if needed
+	if( isset( $_POST[ 'wpds-slide-idle' ] ) ) {
+		update_post_meta( $post_id, 'wpds-slide-idle', $_POST[ 'wpds-slide-idle' ] );	}
 
 	// Checks for input and saves if needed
 	if( isset( $_POST[ 'background-color' ] ) ) {
