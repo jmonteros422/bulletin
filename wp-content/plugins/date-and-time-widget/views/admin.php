@@ -57,4 +57,3 @@
     value="<?php echo $background_color; ?>"
     type="text" class="color-picker" />
 </p>
-

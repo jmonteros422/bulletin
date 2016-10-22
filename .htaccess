@@ -4,7 +4,6 @@ php_value post_max_size 256M
 php_value max_execution_time 0
 php_value max_input_time 0
 
-
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 

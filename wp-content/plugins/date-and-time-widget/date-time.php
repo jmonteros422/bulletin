@@ -20,7 +20,6 @@
  * GitHub Plugin URI: https://github.com/donnapep/wordpress-date-and-time-widget
  */
 
-
 class Date_Time extends WP_Widget {
   /**
    * Unique identifier for your widget.
