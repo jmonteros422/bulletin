@@ -212,9 +212,16 @@ body {
 .dock {
   padding: 2em;
   background: #f2cfa5;
+  float: left;
 }
 
-.row.dock .columns {
+.row:before, .row:after {
+  display: block;
+  content: inherit;
+}
+
+.row.dock .columns,
+.large-4-columns {
   background: #e3e3e3;
   color: #131516;
   -webkit-box-shadow: 1px 1px 5px 0px #717171;
@@ -222,6 +229,9 @@ body {
   box-shadow:         1px 1px 5px 0px #717171;
   padding: 0;
   max-height: 750px;
+  width: 49.5%;
+  margin: 1% .25%;
+  float: left;
 }
 
 
