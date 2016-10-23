@@ -160,11 +160,12 @@
   overflow: visible;
   cursor: auto;
   box-sizing: border-box;
-  font-family: 'ClimaconsRegular', 'Arial', serif;
+  font-family: 'robotoregular', 'Arial', serif;
 }
 
 body {
   background: #f2cfa5;
+  max-height: 1920px;
 }
 
 .header-container {
@@ -219,10 +220,8 @@ body {
   -webkit-box-shadow: 1px 1px 5px 0px #717171;
   -moz-box-shadow:    1px 1px 5px 0px #717171;
   box-shadow:         1px 1px 5px 0px #717171;
-  margin: 1em;
   padding: 0;
-  width: 47%;
-  float: left;
+  max-height: 750px;
 }
 
 
