@@ -9,11 +9,20 @@
  * @since Foundation, for WordPress 1.0
  */
 ?>
-
+<!--	<div class="row dock">-->
+<!--		--><?php //dynamic_sidebar("Dock"); ?>
+<!--	</div>-->
 
 	<div class="row dock">
-		<?php dynamic_sidebar("Dock"); ?>
+		<?php dynamic_sidebar("News and Updates"); ?>
+		<?php dynamic_sidebar("Announcement"); ?>
+		<?php dynamic_sidebar("Calendar of Activities"); ?>
+		<?php dynamic_sidebar("Gospel of the Day"); ?>
+
+
 	</div>
+
+
 	<?php wp_footer(); ?>
 
 

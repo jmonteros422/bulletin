@@ -13,6 +13,7 @@
 //Custom Code
 add_filter('widget_text','do_shortcode');
 
+
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
 			'name' => 'Custom Header Logo',
@@ -39,6 +40,56 @@ if ( function_exists('register_sidebar') )
 
 		)
 	);
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+			'name' => 'Gospel of the Day',
+			'before_widget' => '<div class="large-' . $widget_count . ' columns">',
+			'after_widget' => '</div>',
+			'before_title' => '<h6>',
+			'after_title' => '</h6>'
+		)
+	);
+
+
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+			'name' => 'Calendar of Activities',
+			'before_widget' => '<div class="large-4-columns">',
+			'after_widget' => '</div>',
+			'before_title' => '<h6>',
+			'after_title' => '</h6>'
+		)
+	);
+
+
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+			'name' => 'Announcement',
+			'before_widget' => '<div class="large-4-columns">',
+			'after_widget' => '</div>',
+			'before_title' => '<h6>',
+			'after_title' => '</h6>'
+		)
+	);
+
+
+if ( function_exists('register_sidebar') )
+	register_sidebar(array(
+			'name' => 'News and Updates',
+			'before_widget' => '<div class="large-4-columns">',
+			'after_widget' => '</div>',
+			'before_title' => '<h6>',
+			'after_title' => '</h6>'
+		)
+	);
+
+register_sidebar(array('name'=> $dock,
+	'id' => 'dock',
+	'before_widget' => '<div class="large-4-columns">',
+	'after_widget' => '</div>',
+	'before_title' => '<h6>',
+	'after_title' => '</h6>'
+));
 
 
 function foundation_setup() {
