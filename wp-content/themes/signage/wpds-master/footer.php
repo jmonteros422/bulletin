@@ -13,20 +13,50 @@
 <!--		--><?php //dynamic_sidebar("Dock"); ?>
 <!--	</div>-->
 
+<!--	Dynamic slide-->
 	<div class="row dock">
-		<?php dynamic_sidebar("News and Updates"); ?>
-		<?php dynamic_sidebar("Announcement"); ?>
+		<div id="slideshow">
+			<?php dynamic_sidebar("Announcement"); ?>
+		</div>
+		<div id="slideshow2">
+			<?php dynamic_sidebar("News and Updates"); ?>
+		</div>
+	</div>
+	<div class="row dock">
 		<?php dynamic_sidebar("Calendar of Activities"); ?>
 		<?php dynamic_sidebar("Gospel of the Day"); ?>
-
-
 	</div>
-
-
 	<?php wp_footer(); ?>
 
 
 <script>
+// 	Custom widget slider start
+	jQuery(document).ready(function(){
+
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() {
+			$('#slideshow > div:first')
+				.hide()
+				.next()
+				.show()
+				.end()
+				.appendTo('#slideshow');
+		},  10000);
+
+		$("#slideshow2 > div:gt(0)").hide();
+
+		setInterval(function() {
+			$('#slideshow2 > div:first')
+				.hide()
+				.next()
+				.show()
+				.end()
+				.appendTo('#slideshow2');
+		},  3000);
+
+	});
+// 	Custom widget slider end
 
 	$(function() {
 		$(document).foundation();
