@@ -105,6 +105,10 @@
 		removeText(ByeBye);
 	}
 </script>
-
+<footer>
+	<p>
+		Copyright of STePS
+	</p>
+</footer>
  </body>
 </html>

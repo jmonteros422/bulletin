@@ -212,7 +212,7 @@ body {
 
 }
 
-/*FOOTER*/
+/*WIDGETS*/
 .dock {
   padding: 2em;
   background: #f2cfa5;
@@ -305,4 +305,12 @@ body {
 
 .row.dock .columns, .large-4-columns{
     background:white;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  width: 100%;
+  float:left;
+  text-align: center;
 }
