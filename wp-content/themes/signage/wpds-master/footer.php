@@ -15,12 +15,12 @@
 
 <!--	Dynamic slide-->
 	<div class="row dock">
-<!--		<div id="slideshow">-->
-<!--			--><?php //dynamic_sidebar("Announcement"); ?>
-<!--		</div>-->
 		<div id="slideshow">
-			<?php dynamic_sidebar("News and Updates"); ?>
+			<?php dynamic_sidebar("Announcement"); ?>
 		</div>
+<!--		<div id="slideshow">-->
+<!--			--><?php //dynamic_sidebar("News and Updates"); ?>
+<!--		</div>-->
 	</div>
 	<div class="row dock">
 		<?php dynamic_sidebar("Calendar of Activities"); ?>
