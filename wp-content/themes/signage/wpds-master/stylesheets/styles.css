@@ -307,6 +307,26 @@ body {
     background:white;
 }
 
+/** NEW **/
+.widget-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  background: #f2cfa5;
+}
+.row.dock.left {
+  width: 50%;
+  position: relative;
+}
+.row.dock.right {
+  position: relative;
+  width: 50%;
+  clear: none;
+}
+.large-4-columns {
+  width: 100%;
+}
+
 /* FOOTER */
 footer {
   position: relative;

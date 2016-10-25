@@ -14,17 +14,20 @@
 <!--	</div>-->
 
 <!--	Dynamic slide-->
-	<div class="row dock">
-		<div id="slideshow">
-			<?php dynamic_sidebar("Announcement"); ?>
-		</div>
-<!--		<div id="slideshow">-->
-<!--			--><?php //dynamic_sidebar("News and Updates"); ?>
-<!--		</div>-->
-	</div>
-	<div class="row dock">
-		<?php dynamic_sidebar("Calendar of Activities"); ?>
-		<?php dynamic_sidebar("Gospel of the Day"); ?>
+	<div class="widget-container">
+			<div class="row dock left">
+				<?php dynamic_sidebar("Calendar of Activities"); ?>
+		<!--		<div id="slideshow">-->
+		<!--			--><?php //dynamic_sidebar("News and Updates"); ?>
+		<!--		</div>-->
+			</div>
+			<div class="row dock right">
+
+				<div id="slideshow">
+					<?php dynamic_sidebar("Announcement"); ?>
+				</div>
+				<?php dynamic_sidebar("Gospel of the Day"); ?>
+			</div>
 	</div>
 	<?php wp_footer(); ?>
 
