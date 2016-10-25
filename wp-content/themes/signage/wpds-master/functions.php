@@ -43,10 +43,10 @@ if ( function_exists('register_sidebar') )
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
 			'name' => 'Gospel of the Day',
-			'before_widget' => '<div class="large-4-columns">',
+			'before_widget' => '<div class="large-4-columns"><h6>Gospel of the Day</h6>',
 			'after_widget' => '</div>',
-			'before_title' => '<h6>',
-			'after_title' => '</h6>'
+			'before_title' => '<h5>',
+			'after_title' => '</h5>'
 		)
 	);
 
@@ -54,32 +54,32 @@ if ( function_exists('register_sidebar') )
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
 			'name' => 'Calendar of Activities',
-			'before_widget' => '<div class="large-4-columns">',
+			'before_widget' => '<div class="large-4-columns"><h6>Calendar of Activities</h6>',
 			'after_widget' => '</div>',
-			'before_title' => '<h6>',
-			'after_title' => '</h6>'
+			'before_title' => '<h5>',
+			'after_title' => '</h5>'
 		)
 	);
 
 
-if ( function_exists('register_sidebar') )
-	register_sidebar(array(
-			'name' => 'Announcement',
-			'before_widget' => '<div class="large-4-columns">',
-			'after_widget' => '</div>',
-			'before_title' => '<h6>',
-			'after_title' => '</h6>'
-		)
-	);
+//if ( function_exists('register_sidebar') )
+//	register_sidebar(array(
+//			'name' => 'Announcement',
+//			'before_widget' => '<div class="large-4-columns"><h6>Announcements</h6>',
+//			'after_widget' => '</div>',
+//			'before_title' => '<h5>',
+//			'after_title' => '</h5>'
+//		)
+//	);
 
 
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
 			'name' => 'News and Updates',
-			'before_widget' => '<div class="large-4-columns">',
+			'before_widget' => '<div class="large-4-columns"><h6>News and Updates</h6>',
 			'after_widget' => '</div>',
-			'before_title' => '<h6>',
-			'after_title' => '</h6>'
+			'before_title' => '<h5>',
+			'after_title' => '</h5>'
 		)
 	);
 

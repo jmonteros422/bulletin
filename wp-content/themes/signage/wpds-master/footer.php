@@ -15,10 +15,10 @@
 
 <!--	Dynamic slide-->
 	<div class="row dock">
+<!--		<div id="slideshow">-->
+<!--			--><?php //dynamic_sidebar("Announcement"); ?>
+<!--		</div>-->
 		<div id="slideshow">
-			<?php dynamic_sidebar("Announcement"); ?>
-		</div>
-		<div id="slideshow2">
 			<?php dynamic_sidebar("News and Updates"); ?>
 		</div>
 	</div>
@@ -30,11 +30,24 @@
 
 
 <script>
+
+	function autoHeightDiv(element) {
+		var elementHeights = $(element).map(function () {
+			return $(this).height();
+		}).get();
+
+		// Math.max takes a variable number of arguments
+		// `apply` is equivalent to passing each height as an argument
+		var maxHeight = Math.max.apply(null, elementHeights);
+
+		// Set each height to the max height
+		$(element).height(maxHeight);
+	};
 // 	Custom widget slider start
 	jQuery(document).ready(function(){
 
-		$("#slideshow > div:gt(0)").hide();
-
+		autoHeightDiv('#slideshow > div');
+		$("#slideshow > div:gt(0)").hide()
 		setInterval(function() {
 			$('#slideshow > div:first')
 				.hide()
@@ -42,18 +55,19 @@
 				.show()
 				.end()
 				.appendTo('#slideshow');
-		},  10000);
+		},  2000);
 
-		$("#slideshow2 > div:gt(0)").hide();
 
-		setInterval(function() {
-			$('#slideshow2 > div:first')
-				.hide()
-				.next()
-				.show()
-				.end()
-				.appendTo('#slideshow2');
-		},  3000);
+//		autoHeightDiv('#slideshow2 > div');
+//		$("#slideshow2 > div:gt(0)").hide();
+//		setInterval(function() {
+//			$('#slideshow2 > div:first')
+//				.hide()
+//				.next()
+//				.show()
+//				.end()
+//				.appendTo('#slideshow2');
+//		},  20000);
 
 	});
 // 	Custom widget slider end
