@@ -30,12 +30,12 @@ get_header(); ?>
 
 					<!--Check what kind of slide user wants to post -->
 				<?php if ($postType != 'none'): ?>
-				<li class="post-box large-12 columns" data-delay="<?php echo ($slideIdle) ? $slideIdle * 1000 : '20000';?>">
+				<li data-delay="<?php echo ($slideIdle) ? $slideIdle * 1000 : '20000';?>">
 				<div class="video">
 					<?php if ($postType == 'uploaded'): ?>
 						<div class="video">
 							<video class="videoContent" data-autoplay="true" controls width="100%">
-								<source src="<?php echo $videoLink ?>" type="video/mp4" />
+								<source style="display:block; margin: 0 auto;" src="<?php echo $videoLink ?>" type="video/mp4" />
 							</video>
 						</div>
 					<?php else: ?>
@@ -52,9 +52,10 @@ get_header(); ?>
 					<?php endif; ?>
 				</div>
 				</li>
+				<li class="" data-delay="1"></li>
 				<?php else: ?>
-				<li class="post-box large-12 columns" data-delay="20000">
-					<div class="row">
+				<li data-delay="<?php echo ($slideIdle) ? $slideIdle * 1000 : '20000';?>">
+					<div class="content-row">
 					<div class="content-wysiwyg">
 					<!--Post text/images to slide-->
           			<?php echo do_shortcode( get_the_content() ) ?>

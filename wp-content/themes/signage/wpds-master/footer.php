@@ -46,9 +46,17 @@
 		// Set each height to the max height
 		$(element).height(maxHeight);
 	};
-// 	Custom widget slider start
+
 	jQuery(document).ready(function(){
 
+		//if post has image alone. make it 100%
+		jQuery('.content-wysiwyg').each(function( index ) {
+			if (($(this).children().length) == 1){
+				jQuery(this).find("img").css('width','100%');
+			}
+		});
+
+		//widget slider
 		autoHeightDiv('#slideshow > div');
 		$("#slideshow > div:gt(0)").hide()
 		setInterval(function() {
@@ -59,21 +67,8 @@
 				.end()
 				.appendTo('#slideshow');
 		},  2000);
-
-
-//		autoHeightDiv('#slideshow2 > div');
-//		$("#slideshow2 > div:gt(0)").hide();
-//		setInterval(function() {
-//			$('#slideshow2 > div:first')
-//				.hide()
-//				.next()
-//				.show()
-//				.end()
-//				.appendTo('#slideshow2');
-//		},  20000);
-
+		// 	Custom widget slider end
 	});
-// 	Custom widget slider end
 
 	$(function() {
 		$(document).foundation();
