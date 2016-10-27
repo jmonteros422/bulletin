@@ -185,13 +185,13 @@ body {
 }
 
 .header-container .left {
-  width: 70%;
+  width: 60%;
 }
 
 .header-container .right {
-  width: 30%;
+  width: 40%;
   font-size: 1.5em;
-  height:100%;
+  text-align: right;
 }
 
 .left .logo {
@@ -346,13 +346,14 @@ body {
   width: 100%;
 }
 .row.dock.left .large-4-columns {
-  height: 1000px;
+  height: 1025px;
   overflow: hidden;
 }
 .row.dock.right .large-4-columns {
-  height: 480px;
+  height: 495px;
   margin-top: 0;
   margin-bottom: 30px;
+  text-align: left;
   overflow: hidden;
 }
 /* FOOTER */
@@ -362,4 +363,8 @@ footer {
   float:left;
   text-align: center;
   background: #f2cfa5;
+}
+
+footer p {
+  margin-bottom: 0;
 }
