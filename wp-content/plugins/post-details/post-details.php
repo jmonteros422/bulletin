@@ -47,9 +47,6 @@ function wpds_meta_callback( $post ) {
 
 	<script>
 		jQuery(document).ready(function() {
-
-			$('.wp-editor-tabs').remove();
-
 			var selectId = jQuery('#wpds-video-type');
 			var currentSelectType =  '<?php echo get_post_meta($post->ID, 'wpds-video-type', true); ?>';
 			var videoType = '<?php if ( isset ( $wpds_stored_meta['wpds-video-type'] ) ) echo $wpds_stored_meta['wpds-video-type'][0]; ?>';
@@ -57,7 +54,7 @@ function wpds_meta_callback( $post ) {
 
 
 			jQuery("#wpds").insertBefore( jQuery("#wp-content-wrap"));
-
+			jQuery('.wp-editor-tabs').remove();
 			selectId.val(videoType);
 			checkVal(videoType);
 
