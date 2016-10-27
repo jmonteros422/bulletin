@@ -47,13 +47,17 @@ function wpds_meta_callback( $post ) {
 
 	<script>
 		jQuery(document).ready(function() {
+
+//			jQuery("#wp-content-wrap").removeClass('html-active').addClass('tmce-active');
+
 			var selectId = jQuery('#wpds-video-type');
 			var currentSelectType =  '<?php echo get_post_meta($post->ID, 'wpds-video-type', true); ?>';
 			var videoType = '<?php if ( isset ( $wpds_stored_meta['wpds-video-type'] ) ) echo $wpds_stored_meta['wpds-video-type'][0]; ?>';
 			var videoInput = jQuery('#video-link').val();
 
 
-			jQuery("#wpds").insertBefore( jQuery("#wp-content-wrap"));
+//			jQuery("#wpds").insertBefore( jQuery("#wp-content-wrap"));
+
 			selectId.val(videoType);
 			checkVal(videoType);
 

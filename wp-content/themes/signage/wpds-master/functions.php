@@ -268,7 +268,7 @@ add_action( 'after_setup_theme', 'foundation_setup' );
 
 	// customize backend footer
 	function remove_footer_admin () {
-	echo 'Powered by <a href="http://www.wordpress.org" target="_blank">WordPress</a> &nbsp;&#x272D;&nbsp; Built by <a href="http://pixelydo.com/">Nate Jones</a></p>';
+	echo 'Powered by <a href="http://www.wordpress.org" target="_blank">WordPress</a> Customized by: 034 IT Web Solutions</a></p>';
 	}
 	add_filter('admin_footer_text', 'remove_footer_admin');
 

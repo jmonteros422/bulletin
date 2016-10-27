@@ -53,6 +53,10 @@
 		jQuery('.content-wysiwyg').each(function( index ) {
 			if (($(this).children().length) == 1){
 				jQuery(this).find("img").css('width','100%');
+			}else{
+				$(this).css({"padding": "10px 4px 5px 20px", "height": "inherit"});
+
+
 			}
 		});
 
