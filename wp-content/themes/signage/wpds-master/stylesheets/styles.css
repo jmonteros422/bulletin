@@ -209,9 +209,9 @@ body {
   max-width: 100%;
   width: 100%;
   background-color:rgba(236, 240, 241,1.0);
-    -moz-box-shadow: 0 0 5px 5px #888;
-    -webkit-box-shadow: 0 0 5px 5px#888;
-    box-shadow: 0 0 7px 7px #888;
+  -moz-box-shadow: 0 0 5px 5px #888;
+  -webkit-box-shadow: 0 0 5px 5px #888;
+  box-shadow: 0 0 7px 7px #888;
 }
 
 /*WIDGETS*/
@@ -314,13 +314,15 @@ body {
 }
 
 .date-time .date {
+    font-size: 3rem;
+    font-family: 'robotobold';
     padding: 10px;
-    line-height: 2.5em;
+    line-height: 2em;
     height: 100%;
 }
 
 .row.dock .columns, .large-4-columns{
-    background:white;
+    background: #fff;
 }
 
 /** NEW **/
@@ -345,11 +347,13 @@ body {
 }
 .row.dock.left .large-4-columns {
   height: 1000px;
+  overflow: hidden;
 }
 .row.dock.right .large-4-columns {
   height: 480px;
   margin-top: 0;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 /* FOOTER */
 footer {
