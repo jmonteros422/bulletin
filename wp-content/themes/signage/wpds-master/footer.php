@@ -61,17 +61,20 @@
 		});
 
 		//widget slider
-		autoHeightDiv('#slideshow > div');
-		$("#slideshow > div:gt(0)").hide()
-		setInterval(function() {
-			$('#slideshow > div:first')
-				.hide()
-				.next()
-				.show()
-				.end()
-				.appendTo('#slideshow');
-		},  2000);
-		// 	Custom widget slider end
+
+		if($("#slideshow > div").length > 1){
+			autoHeightDiv('#slideshow > div');
+			$("#slideshow > div:gt(0)").hide()
+			setInterval(function () {
+				$('#slideshow > div:first')
+					.hide()
+					.next()
+					.show()
+					.end()
+					.appendTo('#slideshow');
+			}, 30000); //custom widget in milliseconds
+			// 	Custom widget slider end
+		}
 	});
 
 	$(function() {

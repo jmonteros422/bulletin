@@ -242,7 +242,7 @@ body {
 
 
 .textwidget {
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 1em 1.5em;
   line-height: 1.5;
   background: #fff;
@@ -259,9 +259,9 @@ body {
 }
 
 .dock h5 {
-  font-size: 1.75rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  padding: .75em 1.25em;
+  padding: .5em 1.25em;
 }
 
 .videoContent{
@@ -320,6 +320,9 @@ body {
     line-height: 2em;
     height: 100%;
 }
+.clock{
+    color:#c60f13;
+}
 
 .row.dock .columns, .large-4-columns{
     background: #fff;
@@ -374,4 +377,8 @@ footer {
 
 footer p {
   margin-bottom: 0;
+}
+
+.textwidget ul li {
+    list-style: none;
 }

@@ -54,7 +54,7 @@ function wpds_meta_callback( $post ) {
 
 
 			jQuery("#wpds").insertBefore( jQuery("#wp-content-wrap"));
-			jQuery('.wp-editor-tabs').remove();
+
 			selectId.val(videoType);
 			checkVal(videoType);
 

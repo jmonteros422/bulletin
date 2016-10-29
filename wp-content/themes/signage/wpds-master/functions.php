@@ -83,13 +83,13 @@ if ( function_exists('register_sidebar') )
 //		)
 //	);
 
-register_sidebar(array('name'=> $dock,
-	'id' => 'dock',
-	'before_widget' => '<div class="large-4-columns">',
-	'after_widget' => '</div>',
-	'before_title' => '<h6>',
-	'after_title' => '</h6>'
-));
+//register_sidebar(array('name'=> $dock,
+//	'id' => 'dock',
+//	'before_widget' => '<div class="large-4-columns">',
+//	'after_widget' => '</div>',
+//	'before_title' => '<h6>',
+//	'after_title' => '</h6>'
+//));
 
 
 function foundation_setup() {
@@ -327,16 +327,16 @@ function count_sidebar_widgets( $sidebar_id, $echo = true ) {
 // CREATE DOCK WIDGET AREA
 //
 //***********************
-$sidebars = array('Dock');
-foreach ($sidebars as $dock) {
-	register_sidebar(array('name'=> $dock,
-		'id' => 'dock',
-		'before_widget' => '<div class="large-' . $widget_count . ' columns">',
-		'after_widget' => '</div>',
-		'before_title' => '<h6>',
-		'after_title' => '</h6>'
-	));
-}
+//$sidebars = array('Dock');
+//foreach ($sidebars as $dock) {
+//	register_sidebar(array('name'=> $dock,
+//		'id' => 'dock',
+//		'before_widget' => '<div class="large-' . $widget_count . ' columns">',
+//		'after_widget' => '</div>',
+//		'before_title' => '<h6>',
+//		'after_title' => '</h6>'
+//	));
+//}
 
 
 //***********************
