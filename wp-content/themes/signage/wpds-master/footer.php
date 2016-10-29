@@ -72,7 +72,7 @@
 					.show()
 					.end()
 					.appendTo('#slideshow');
-			}, 30000); //custom widget in milliseconds
+			}, 5000); //custom widget in milliseconds
 			// 	Custom widget slider end
 		}
 	});
