@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheets/ninja-slider.css">
 	<script src="<?php bloginfo('template_url'); ?>/javascripts/vendor/ninjaVideoPlugin.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/javascripts/vendor/ninja-slider.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/javascripts/vendor/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheets/styles.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> -->
 	<script type="text/javascript">
